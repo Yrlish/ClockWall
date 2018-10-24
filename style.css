@@ -1,0 +1,30 @@
+body {
+    padding-top: 4rem;
+}
+
+.clock {
+    width: calc((100% / 18) - 1rem);
+    border: .3ch dotted lightgrey;
+    border-radius: 100%;
+    position: relative;
+    margin: 0 .5rem 1rem;
+    float: left;
+}
+
+.clock::before{
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+.clock > .pointer {
+    display: block;
+    position: absolute;
+    width: .15rem;
+    height: 50%;
+    background-color: black;
+    transform-origin: center bottom 0;
+    top: calc(50% - 50%);
+    left: calc(50% - .15rem);
+    transform: rotate(0deg);
+}
